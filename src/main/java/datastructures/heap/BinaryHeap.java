@@ -15,6 +15,29 @@ public class BinaryHeap<T extends Comparable<? super T>> {
         this.heap = new ArrayList<>();
     }
 
+    public BinaryHeap(List<T> data){
+        this.heap = data;
+        for (int i = (data.size() -1)/2; i>=0; i--){
+            percolateDown(i);
+        }
+    }
+
+    /**
+     * 构造堆1
+     * 复杂度：O(N)
+     * 适用情况：主要用于元素已经确定好的情况, 从第N/2个节点开始处理
+     * @param data
+     * @return
+     */
+
+    /**
+     * 构造堆2：通过insert操作
+     * 复杂度：O(Nlog(N))
+     * 适用情况：假定事先不知道有多少个元素,通过插入元素来调整堆
+     * @param data
+     * @return
+     */
+
     /**
      * 插入
      *
